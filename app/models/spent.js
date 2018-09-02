@@ -1,20 +1,26 @@
 module.exports = function(sequelize, DataType) {
-    const Kid = sequelize.define('kid', {
+    const Spent = sequelize.define('spent', {
         id: {
             type: DataType.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
+        adult_id: {
+            type: DataType.INTEGER,
+            allowNull: true
+        },
+        spent_type_id: {
+            type: DataType.INTEGER,
+            allowNull: true
+        },
         name: {
             type: DataType.STRING,
+            allowNull: false,
             notEmpty: true
         },
-        url_img: {
-            type: DataType.STRING,
-            defaultValue: ""
-        },
-        notification_id: {
-            type: DataType.STRING
+        value: {
+            type: DataType.DECIMAL,
+            allowNull: false
         },
         created_at: {
             type: DataType.DATE,
@@ -30,5 +36,5 @@ module.exports = function(sequelize, DataType) {
         underscored: true
     });
 
-    return Kid;
+    return Spent;
 }

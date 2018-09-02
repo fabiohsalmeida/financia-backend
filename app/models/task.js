@@ -5,6 +5,10 @@ module.exports = function(sequelize, DataType) {
             autoIncrement: true,
             primaryKey: true
         },
+        kid_id: {
+            type: DataType.INTEGER,
+            allowNull: false
+        },
         name: {
             type: DataType.STRING,
             notEmpty: true
@@ -21,6 +25,10 @@ module.exports = function(sequelize, DataType) {
             type: DataType.BOOLEAN,
             defaultValue: false
         },
+        reward: {
+            type: DataType.DECIMAL,
+            allowNull: false
+        },
         created_at: {
             type: DataType.DATE,
             allowNull: true,
@@ -31,6 +39,8 @@ module.exports = function(sequelize, DataType) {
             allowNull: true,
             defaultValue: DataType.NOW
         }
+    }, {
+        underscored: true
     });
 
     return Task;

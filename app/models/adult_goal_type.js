@@ -1,20 +1,14 @@
 module.exports = function(sequelize, DataType) {
-    const Kid = sequelize.define('kid', {
+    const AdultGoalType = sequelize.define('adult_goal_type', {
         id: {
             type: DataType.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        name: {
+        type: {
             type: DataType.STRING,
+            allowNull: false,
             notEmpty: true
-        },
-        url_img: {
-            type: DataType.STRING,
-            defaultValue: ""
-        },
-        notification_id: {
-            type: DataType.STRING
         },
         created_at: {
             type: DataType.DATE,
@@ -30,5 +24,5 @@ module.exports = function(sequelize, DataType) {
         underscored: true
     });
 
-    return Kid;
+    return AdultGoalType;
 }

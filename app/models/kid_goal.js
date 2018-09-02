@@ -1,9 +1,13 @@
 module.exports = function(sequelize, DataType) {
-    const Goal = sequelize.define('goal', {
+    const KidGoal = sequelize.define('kid_goal', {
         id: {
             type: DataType.INTEGER,
             autoIncrement: true,
             primaryKey: true
+        },
+        kid_id: {
+            type: DataType.INTEGER,
+            allowNull: true
         },
         current_balance: {
             type: DataType.DECIMAL,
@@ -26,7 +30,9 @@ module.exports = function(sequelize, DataType) {
             allowNull: true,
             defaultValue: DataType.NOW
         }
+    }, {
+        underscored: true
     });
 
-    return Goal;
+    return KidGoal;
 }

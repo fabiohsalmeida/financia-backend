@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataType) {
-    const Kid = sequelize.define('kid', {
+    const AdultGoal = sequelize.define('adult_goal', {
         id: {
             type: DataType.INTEGER,
             autoIncrement: true,
@@ -7,14 +7,24 @@ module.exports = function(sequelize, DataType) {
         },
         name: {
             type: DataType.STRING,
-            notEmpty: true
+            allowNull: false
         },
-        url_img: {
-            type: DataType.STRING,
-            defaultValue: ""
+        adult_id: {
+            type: DataType.INTEGER,
+            allowNull: false
         },
-        notification_id: {
-            type: DataType.STRING
+        adult_goal_type_id: {
+            type: DataType.INTEGER,
+            allowNull: false
+        },
+        current_balance: {
+            type: DataType.DECIMAL,
+            allowNull: false,
+            defaultValue: 0
+        },
+        goal_balance: {
+            type: DataType.DECIMAL,
+            allowNull: false
         },
         created_at: {
             type: DataType.DATE,
@@ -30,5 +40,5 @@ module.exports = function(sequelize, DataType) {
         underscored: true
     });
 
-    return Kid;
+    return AdultGoal;
 }

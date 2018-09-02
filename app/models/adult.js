@@ -9,9 +9,28 @@ module.exports = function(sequelize, DataType) {
             type: DataType.STRING,
             notEmpty: true
         },
+        email: {
+            type: DataType.STRING,
+            allowNull: false,
+            notEmpty: true
+        },
+        city: {
+            type: DataType.STRING
+        },
+        uf: {
+            type: DataType.STRING
+        },
         url_img: {
             type: DataType.STRING,
             defaultValue: ""
+        },
+        notification_id: {
+            type: DataType.STRING,
+            allowNull: true
+        },
+        age: {
+            type: DataType.INTEGER,
+            allowNull: false
         },
         created_at: {
             type: DataType.DATE,
