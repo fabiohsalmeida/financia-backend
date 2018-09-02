@@ -13,6 +13,9 @@ module.exports = function(sequelize, DataType) {
             type: DataType.STRING,
             defaultValue: ""
         },
+        notification_id: {
+            type: DataType.STRING
+        },
         created_at: {
             type: DataType.DATE,
             allowNull: true,
