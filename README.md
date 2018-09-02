@@ -36,7 +36,7 @@
 `http://localhost:3000`
 
 > Os comandos acima iniciam apenas o *servidor* da aplicação.  
-> Para uma experiência completa inicie também o Frontend, saiba mais [aqui](http://www.tools.ages.pucrs.br/arbitrium/web).
+> Para uma experiência completa inicie também o Frontend, saiba mais [aqui](https://github.com/AlanQuadros/financia-mobile.git).
 
 ## Estrutura
 
@@ -44,19 +44,48 @@
 app/
 ├─ config/
 │  ├─ db/
+│  │  ├─ adult_goal_types.js
+│  │  ├─ adult_goals.js
+│  │  ├─ adults.js
 │  │  ├─ createDbScript.sql
 │  │  ├─ dropTablesScript.sql
+│  │  ├─ kid_goals.js
+│  │  ├─ kids.js
+│  │  ├─ spent_types.js
+│  │  ├─ spents.js
+│  │  ├─ tasks.js
 │  ├─ sequelize_config.json
 ├─ controllers/
-│  ├─ user.js
+│  ├─ adult_goal.js
+│  ├─ adult.js
+│  ├─ adults_kids.js
+│  ├─ kid.js
+│  ├─ spent.js
+│  ├─ task.js
 ├─ middlewares/
 ├─ models/
+│  ├─ adult_goal_type.js
+|  ├─ adult_goal.js
+│  ├─ adult.js
+│  ├─ adults_kids.js
 │  ├─ index.js
-|  ├─ user.js
+│  ├─ kid_goal.js
+│  ├─ kid.js
+│  ├─ spent_type.js
+│  ├─ spent.js
+│  ├─ task.js
 ├─ routes/
-│  ├─ user.js
+│  ├─ adult_goal.js
+│  ├─ adult.js
+│  ├─ adults_kids.js
+│  ├─ kid.js
+│  ├─ spent.js
+│  ├─ task.js
 .env
+.gitignore
+LICENSE
 package.json
+README.md
 server.js
 ```
 
