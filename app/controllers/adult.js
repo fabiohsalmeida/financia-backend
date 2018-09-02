@@ -2,14 +2,21 @@ const db = require('../models/index');
 const AdultModel = require('../models/adult.js')(db.sequelize,db.Sequelize);
 
 exports.create = function(req, res) {
-    if(!req.body.name) {
+    if(!req.body.name || !req.body.email || !req.body.age) {
         return res.status(400).send({
-            message: "Adult name can't be empty."
+            message: "Adult name, email and age can't be empty."
         });
     }
 
     const adult = new AdultModel({
-        name: req.body.name
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        city: req.body.city,
+        uf: req.body.uf,
+        url_img: req.body.url_img,
+        notification_id: req.body.notification_id,
+        age: req.body.age
     });
 
     adult.save()
