@@ -1,9 +1,9 @@
 {
     "development": {
-        "username": "sql10254785",
-        "password": "7sjtmYDIkA",
-        "database": "sql10254785",
-        "host": "sql10.freemysqlhosting.net",
+        "username": "root",
+        "password": "root",
+        "database": "financia",
+        "host": "localhost",
         "dialect": "mysql"
     },
     "test": {
@@ -14,10 +14,10 @@
         "dialect": "mysql"
     },
     "production": {
-        "username": "",
-        "password": null,
-        "database": "",
-        "host": "127.0.0.1",
+        "username": "sql10254785",
+        "password": "7sjtmYDIkA",
+        "database": "sql10254785",
+        "host": "sql10.freemysqlhosting.net",
         "dialect": "mysql"
     }
 }
