@@ -18,12 +18,16 @@ module.exports = function(sequelize, DataType) {
             allowNull: false
         },
         current_balance: {
-            type: DataType.DECIMAL,
+            type: DataType.FLOAT,
             allowNull: false,
             defaultValue: 0
         },
+        percent: {
+            type: DataType.FLOAT,
+            allowNull: false
+        },
         goal_balance: {
-            type: DataType.DECIMAL,
+            type: DataType.FLOAT,
             allowNull: false
         },
         created_at: {

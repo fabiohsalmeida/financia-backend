@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataType) {
             defaultValue: false
         },
         reward: {
-            type: DataType.DECIMAL,
+            type: DataType.FLOAT,
             allowNull: false
         },
         created_at: {

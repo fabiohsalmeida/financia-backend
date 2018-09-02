@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataType) {
             notEmpty: true
         },
         value: {
-            type: DataType.DECIMAL,
+            type: DataType.FLOAT,
             allowNull: false
         },
         created_at: {

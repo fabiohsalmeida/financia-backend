@@ -10,11 +10,11 @@ module.exports = function(sequelize, DataType) {
             allowNull: true
         },
         current_balance: {
-            type: DataType.DECIMAL,
+            type: DataType.FLOAT,
             defaultValue: 0
         },
         goal_balance: {
-            type: DataType.DECIMAL
+            type: DataType.FLOAT
         },
         url_img: {
             type: DataType.STRING,
