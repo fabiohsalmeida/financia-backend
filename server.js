@@ -28,6 +28,7 @@ app.get('/', function(req, res) {
 // Other routes
 require('./app/routes/adult.js')(app);
 require('./app/routes/kid.js')(app);
+require('./app/routes/task.js')(app);
 
 // Start server
 app.listen(3000, function(err) {

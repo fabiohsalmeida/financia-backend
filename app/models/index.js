@@ -31,7 +31,7 @@ db.kids.belongsToMany(db.adults,{through: 'AdultKid'});
 db.kids.hasMany(db.kid_goals);
 db.kids.hasMany(db.tasks);
 db.kid_goals.belongsTo(db.kids);
-db.tasks.belongsTo(db.tasks);
+db.tasks.belongsTo(db.kids);
 
 //Adult relations
 db.adults.hasMany(db.spents);
