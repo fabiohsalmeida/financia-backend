@@ -1,5 +1,5 @@
 {
-  "name": "arbitrium-api",
+  "name": "financia-backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://fabio.almeida@www.tools.ages.pucrs.br/arbitrium/api.git"
+    "url": "https://github.com/fabiohsalmeida/financia-backend.git"
   },
-  "author": "fabio.almeida.001",
+  "author": "fabiohsalmeida",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

@@ -12,6 +12,21 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 //Load models without dependencies
-db.users = require('./user.js')(sequelize, Sequelize);
+db.adults = require('./adult.js')(sequelize, Sequelize);
+db.kids = require('./kid.js')(sequelize, Sequelize);
+
+//Load models with dependencies
+db.tasks = require('./task.js')(sequelize, Sequelize);
+db.goals = require('./goal.js')(sequelize, Sequelize);
+
+//Build many-to-many relations 
+db.adults.belongsToMany(db.kids,{through: 'AdultKid'});
+db.kids.belongsToMany(db.adults,{through: 'AdultKid'});
+
+//Kid relations
+db.kids.hasMany(db.goals);
+db.kids.hasMany(db.tasks);
+db.goals.belongsTo(db.kids);
+db.tasks.belongsTo(db.tasks);
 
 module.exports = db;

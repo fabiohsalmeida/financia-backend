@@ -6,7 +6,6 @@ const env = require('dotenv').load();
 const models = require("./app/models");
 let app = express();
 
-
 //For BodyParser
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -27,7 +26,8 @@ app.get('/', function(req, res) {
 });
 
 // Other routes
-require('./app/routes/user.js')(app);
+require('./app/routes/adult.js')(app);
+require('./app/routes/kid.js')(app);
 
 // Start server
 app.listen(3000, function(err) {

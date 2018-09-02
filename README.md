@@ -1,6 +1,6 @@
-# Arbitrium
+# FinanCia
 
-> Uma aplicação para ajudar a entender como as pessoas tomam decisões e fazem a gestão do tempo em seu cotidiano.
+> Um aplicativo para controle de gastos e compartilhamento de metas junto com a família.
 
 ## Tecnologias Utilizadas
 - NodeJS - [saiba mais](https://nodejs.org/en/docs/)
@@ -18,7 +18,7 @@
 
 ## Iniciando
 - Clone o repositório:  
-`git clone http://www.tools.ages.pucrs.br/arbitrium/api.git`
+`git clone https://github.com/fabiohsalmeida/financia-backend.git`
 
 - Entre no diretório:  
 `cd api`
@@ -48,24 +48,13 @@ app/
 │  │  ├─ dropTablesScript.sql
 │  ├─ sequelize_config.json
 ├─ controllers/
-│  ├─ activity.js
-│  ├─ interview.js
+│  ├─ user.js
 ├─ middlewares/
 ├─ models/
-│  ├─ activity_punctuation.js
-│  ├─ activity.js
-│  ├─ day.js
-│  ├─ event.js
-│  ├─ hour.js
 │  ├─ index.js
-│  ├─ interview.js
-│  ├─ question.js
-│  ├─ researcher.js
-│  ├─ schedule.js
-│  ├─ week.js
+|  ├─ user.js
 ├─ routes/
-│  ├─ activity.js
-│  ├─ interview.js
+│  ├─ user.js
 .env
 package.json
 server.js
@@ -80,14 +69,3 @@ npm install
 # server em localhost:3000
 npm start
 ```
-
-## Saiba mais
-- Criar aplicação simples usando Passport, SequelizeJS e MySQL: [tutorial](https://code.tutsplus.com/tutorials/using-passport-with-sequelize-and-mysql--cms-27537)
-
-- Criar CRUD com RESTFul APIs: [tutorial](https://www.callicoder.com/node-js-express-mongodb-restful-crud-api-tutorial/)
-
-- Criar API Rest escalável: [tutorial](https://codeburst.io/build-a-rest-api-for-node-mysql-2018-jwt-6957bcfc7ac9)
-
-- Arbitrium API: [repositório](http://www.tools.ages.pucrs.br/arbitrium/api)
-
-- Sobre o Arbitrium: [wiki](http://www.tools.ages.pucrs.br/arbitrium/api/wikis/home)
