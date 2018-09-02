@@ -120,6 +120,6 @@ require('./app/routes/spent.js')(app);
 require('./app/routes/adults_kids.js')(app);
 
 // Start server
-app.listen(3000, function(err) {
+app.listen(process.env.PORT || 3000, function(err) {
     console.log("Server is listening on port 3000");
 });
