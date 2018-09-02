@@ -5,6 +5,10 @@ module.exports = function(sequelize, DataType) {
             autoIncrement: true,
             primaryKey: true
         },
+        adult_id: {
+            type: DataType.INTEGER,
+            allowNull: true
+        },
         spent_type_id: {
             type: DataType.INTEGER,
             allowNull: true

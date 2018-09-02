@@ -5,6 +5,10 @@ module.exports = function(sequelize, DataType) {
             autoIncrement: true,
             primaryKey: true
         },
+        kid_id: {
+            type: DataType.INTEGER,
+            allowNull: false
+        },
         name: {
             type: DataType.STRING,
             notEmpty: true
@@ -20,6 +24,10 @@ module.exports = function(sequelize, DataType) {
         finished: {
             type: DataType.BOOLEAN,
             defaultValue: false
+        },
+        reward: {
+            type: DataType.DECIMAL,
+            allowNull: false
         },
         created_at: {
             type: DataType.DATE,

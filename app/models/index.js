@@ -22,10 +22,13 @@ db.tasks = require('./task.js')(sequelize, Sequelize);
 db.kid_goals = require('./kid_goal.js')(sequelize, Sequelize);
 db.adult_goals = require('./adult_goal.js')(sequelize, Sequelize);
 db.spents = require('./spent.js')(sequelize, Sequelize);
+db.adults_kids = require('./adults_kids.js')(sequelize, Sequelize);
 
 //Build many-to-many relations 
-db.adults.belongsToMany(db.kids,{through: 'AdultKid'});
-db.kids.belongsToMany(db.adults,{through: 'AdultKid'});
+db.adults.hasMany(db.adults_kids);
+db.adults_kids.belongsTo(db.adults);
+db.kids.hasMany(db.adults_kids);
+db.adults_kids.belongsTo(db.kids);
 
 //Kid relations
 db.kids.hasMany(db.kid_goals);
@@ -46,5 +49,7 @@ db.adult_goal_types.belongsTo(db.adult_goals);
 //Adult spent relations
 db.spents.hasOne(db.spent_types);
 db.spent_types.belongsTo(db.spents);
+
+
 
 module.exports = db;

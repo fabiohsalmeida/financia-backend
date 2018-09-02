@@ -5,20 +5,26 @@ module.exports = function(sequelize, DataType) {
             autoIncrement: true,
             primaryKey: true
         },
+        name: {
+            type: DataType.STRING,
+            allowNull: false
+        },
         adult_id: {
             type: DataType.INTEGER,
-            allowNull: true
+            allowNull: false
         },
         adult_goal_type_id: {
             type: DataType.INTEGER,
-            allowNull: true
+            allowNull: false
         },
         current_balance: {
             type: DataType.DECIMAL,
+            allowNull: false,
             defaultValue: 0
         },
         goal_balance: {
-            type: DataType.DECIMAL
+            type: DataType.DECIMAL,
+            allowNull: false
         },
         created_at: {
             type: DataType.DATE,
