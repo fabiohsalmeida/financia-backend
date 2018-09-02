@@ -1,25 +1,24 @@
 module.exports = function(sequelize, DataType) {
-    const Task = sequelize.define('task', {
+    const AdultGoal = sequelize.define('adult_goal', {
         id: {
             type: DataType.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        name: {
-            type: DataType.STRING,
-            notEmpty: true
+        adult_id: {
+            type: DataType.INTEGER,
+            allowNull: true
         },
-        keeped_to_own_account: {
-            type: DataType.BOOLEAN,
-            defaultValue: false
+        adult_goal_type_id: {
+            type: DataType.INTEGER,
+            allowNull: true
         },
-        donate: {
-            type: DataType.BOOLEAN,
-            defaultValue: false
+        current_balance: {
+            type: DataType.DECIMAL,
+            defaultValue: 0
         },
-        finished: {
-            type: DataType.BOOLEAN,
-            defaultValue: false
+        goal_balance: {
+            type: DataType.DECIMAL
         },
         created_at: {
             type: DataType.DATE,
@@ -35,5 +34,5 @@ module.exports = function(sequelize, DataType) {
         underscored: true
     });
 
-    return Task;
+    return AdultGoal;
 }

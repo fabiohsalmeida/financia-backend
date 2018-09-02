@@ -1,25 +1,14 @@
 module.exports = function(sequelize, DataType) {
-    const Task = sequelize.define('task', {
+    const SpentType = sequelize.define('spent_type', {
         id: {
             type: DataType.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        name: {
+        type: {
             type: DataType.STRING,
+            allowNull: false,
             notEmpty: true
-        },
-        keeped_to_own_account: {
-            type: DataType.BOOLEAN,
-            defaultValue: false
-        },
-        donate: {
-            type: DataType.BOOLEAN,
-            defaultValue: false
-        },
-        finished: {
-            type: DataType.BOOLEAN,
-            defaultValue: false
         },
         created_at: {
             type: DataType.DATE,
@@ -35,5 +24,5 @@ module.exports = function(sequelize, DataType) {
         underscored: true
     });
 
-    return Task;
+    return SpentType;
 }

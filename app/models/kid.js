@@ -23,6 +23,8 @@ module.exports = function(sequelize, DataType) {
             allowNull: true,
             defaultValue: DataType.NOW
         }
+    }, {
+        underscored: true
     });
 
     return Kid;
