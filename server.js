@@ -108,7 +108,7 @@ models.sequelize.sync().then(function() {
 
 // Default route
 app.get('/', function(req, res) {
-    res.json({"message": "Welcome to Arbitrium Project."});
+    res.json({"message": "Welcome to FinanCia API."});
 });
 
 // Other routes
