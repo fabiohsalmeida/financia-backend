@@ -14,9 +14,9 @@
         "dialect": "mysql"
     },
     "production": {
-        "username": "sql10254785",
-        "password": "7sjtmYDIkA",
-        "database": "sql10254785",
+        "username": "sql10254804",
+        "password": "8ujGS8fbGQ",
+        "database": "sql10254804",
         "host": "sql10.freemysqlhosting.net",
         "dialect": "mysql"
     }
